@@ -93,7 +93,6 @@ TEMPLATES = [
                 
                 # `allauth` needs this from django
                 'django.template.context_processors.request',
-                'organisations.context_processors.organisation_list',
             ],
         },
     },
