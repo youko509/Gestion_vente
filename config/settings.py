@@ -57,43 +57,15 @@ INSTALLED_APPS = [
 
     'crispy_forms',
     'crispy_bootstrap5',
-    'phonenumber_field',
     'django_admin_generator',
-    'django_countries',
-    'coupon_management',
-    'comment',
-    "anymail",
-
-    'rest_framework',
-    'rest_framework.authtoken',
-    'drf_generators',
-    'corsheaders',
-
     'sales',
-    'django_celery_results',
-    # ... include the providers you want to enable:
-    # 'allauth.socialaccount.providers.apple',
-    # 'allauth.socialaccount.providers.facebook',
-    # 'allauth.socialaccount.providers.github',
-    # 'allauth.socialaccount.providers.gitlab',
-    'allauth.socialaccount.providers.google',
-    # 'allauth.socialaccount.providers.instagram',
-    # 'allauth.socialaccount.providers.linkedin',
-    # 'allauth.socialaccount.providers.linkedin_oauth2',
-    # 'allauth.socialaccount.providers.soundcloud',
-    # 'allauth.socialaccount.providers.spotify',
-    # 'allauth.socialaccount.providers.twitter',
-    # 'allauth.socialaccount.providers.zoho',
+   
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-
-    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
-
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
