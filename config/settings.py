@@ -55,8 +55,6 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.humanize',
 
-    'crispy_forms',
-    'crispy_bootstrap5',
     'django_admin_generator',
     'sales',
    
