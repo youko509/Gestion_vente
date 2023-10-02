@@ -13,8 +13,8 @@ class Product(models.Model):
     dateExpiration    = models.DateField(_('expire date'),max_length=255,blank=True, null=True)
 
     created_at   = models.DateTimeField(default=now)
-    # def __str__(self):
-    #     return f'{self.name} {_("Price")}:{self.price} {self.currency}'
+    def __str__(self):
+        return f'{self.libellé}'
 
 
 class Stock(models.Model):
@@ -25,6 +25,9 @@ class Stock(models.Model):
 
     created_at   = models.DateTimeField(default=now)
 
+    def __str__(self):
+        return f'{self.article.libellé}'
+
 
 class Client(models.Model):
     nom = models.CharField(_('Nom'), max_length=150, blank=False, )
@@ -34,6 +37,10 @@ class Client(models.Model):
     telephone = models.CharField(_('telephone'), max_length=150, blank=False, )
 
     created_at   = models.DateTimeField(default=now)
+
+    def __str__(self):
+
+        return f'{self.nom} {self.prenom}'
     
     
 class Panier(models.Model):
