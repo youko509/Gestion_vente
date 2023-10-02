@@ -33,8 +33,8 @@ class Client(models.Model):
     nom = models.CharField(_('Nom'), max_length=150, blank=False, )
     prenom = models.CharField(_('Prénom'), max_length=150, blank=False, )
     dateNaissance = models.DateField(_('Date de Naissance'), blank=False, )
-    Nif = models.DecimalField(_('Nif'),  blank=False, decimal_places=2,default=0, max_digits=18)
-    telephone = models.DecimalField(_('telephone'), blank=False, decimal_places=2, default=0, max_digits=18)
+    Nif = models.IntegerField(_('Nif'),  blank=False, default=0, )
+    telephone = models.IntegerField(_('telephone'), blank=False, default=0, )
 
     created_at   = models.DateTimeField(default=now)
 
