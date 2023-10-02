@@ -32,7 +32,7 @@ class Stock(models.Model):
 class Client(models.Model):
     nom = models.CharField(_('Nom'), max_length=150, blank=False, )
     prenom = models.CharField(_('Prénom'), max_length=150, blank=False, )
-    dateNaissance = models.DateTimeField(_('Date de Naissance'), blank=False, )
+    dateNaissance = models.DateField(_('Date de Naissance'), blank=False, )
     Nif = models.CharField(_('Nif'), max_length=150, blank=False, )
     telephone = models.CharField(_('telephone'), max_length=150, blank=False, )
 
@@ -53,7 +53,7 @@ class Panier(models.Model):
         cartId=datetime.now().timestamp()
         self.cart_id= int(cartId)
         super(Panier, self).save(*args, **kwargs)
-        
+
     def __str__(self):
         return f'{self.cart_id}'
     
