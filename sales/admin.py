@@ -60,7 +60,7 @@ class VenteAdmin(admin.ModelAdmin):
         'panier',
         'quantity',
         'a_livrer',
-        'price',
+       
         'created_at',
     )
     list_filter = (
@@ -70,7 +70,7 @@ class VenteAdmin(admin.ModelAdmin):
         'created_at',
         'id',
         'quantity',
-        'price',
+       
     )
     date_hierarchy = 'created_at'
 
@@ -79,12 +79,12 @@ class LivraisonAdmin(admin.ModelAdmin):
 
     list_display = (
         'id',
-        'codeClient',
+        'panier',
         'dateLivraison',
         'dateEnregistrement',
     )
-    list_filter = ('codeClient', 'dateLivraison', 'dateEnregistrement', 'id')
-    raw_id_fields = ('codeVente',)
+    list_filter = ('panier', 'dateLivraison', 'dateEnregistrement', 'id')
+    raw_id_fields = ('panier',)
 
 
 def _register(model, admin_class):
